@@ -1,6 +1,6 @@
 # Do-you-know-me?
 
-This is quiz app made in js for my friends, to test "How well they know me?"
+This is quiz app made in js for my friends, to test **"How well they know me?"**
 
 Go to: https://replit.com/@jyotijangid/quiz-jyoti?embed=true#index.js 
 
