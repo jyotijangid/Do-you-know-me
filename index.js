@@ -19,7 +19,7 @@ function game(){
   // quiz begins
   var userScore = quiz();
   var scores = {
-    currentHighestScore:100
+    currentHighestScore:60
   };
   console.log(chalk.green(`Total questions: 12,
 Correctly answered questions: ${userScore/10}`))
