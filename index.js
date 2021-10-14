@@ -1,7 +1,7 @@
 console.clear();
 
-var readLineSync = require('readline-sync');
-var chalk = require('chalk');
+let readLineSync = require('readline-sync');
+let chalk = require('chalk');
 
 game();
 
@@ -9,16 +9,16 @@ game();
 function game(){
   
   // Greetings
-  var welcomeMsg = `Hi, Welcome let's play "DO YOU KNOW JYOTI?"\n`;
+  const welcomeMsg = `Hi, Welcome let's play "DO YOU KNOW JYOTI?"\n`;
   console.log(chalk.yellowBright(welcomeMsg));
   
-  var username = readLineSync.question(chalk.cyan(`May I know your name please? \n`));
+  let username = readLineSync.question(chalk.cyan(`May I know your name please? \n`));
 
   console.log(chalk.cyan(`\n${capitalize(username)}, let the fun begin :)\n`));
   
   // quiz begins
-  var userScore = quiz();
-  var scores = {
+  let userScore = quiz();
+  let scores = {
     currentHighestScore:60
   };
   console.log(chalk.green(`Total questions: 12,
@@ -47,8 +47,8 @@ Correctly answered questions: ${userScore/10}`))
 // quiz function
 function quiz(){
   
-  var score = 0;
-  var quesAns = [{
+  let score = 0;
+  const quesAns = [{
     question: `Who wouldn't Jyoti ever visit? `, 
     options: ['Fortune teller','Psychiatrist','Plastic surgeon','Dentist'],
     answer:'Plastic surgeon'
@@ -76,7 +76,7 @@ function quiz(){
   {
     question: `What is Jyoti 's biggest fear? `,
     options: ['Spiders','Confined spaces','Heights',`She's gonna die single`],
-    answer:`She will die single`
+    answer:`She's gonna die single`
   },
   {
     question: `Jyoti doesn't like when people? ` ,
@@ -106,11 +106,11 @@ function quiz(){
   {
     question: `What is Jyoti's retirement plan? `,
     options: ['Buy a big land, make a small home, do gardening, read, have pets','Go traveling around the globe',`Go to the mountains, be a saint, if she didn't do it already`],
-    answer:'Traveling'
+    answer:'Buy a big land, make a small home, do gardening, read, have pets'
   }];
   for (let i of quesAns){
     
-    var ansUser = readLineSync.keyInSelect(i.options, i.question);
+    let ansUser = readLineSync.keyInSelect(i.options, i.question);
         
     if (i.options[ansUser].toLowerCase() === i.answer.toLowerCase())
     {
